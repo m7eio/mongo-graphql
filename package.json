@@ -1,0 +1,76 @@
+{
+  "name": "@m7eio/mongo-graphql-starter",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m7eio/mongo-graphql-starter.git"
+  },
+  "author": "Adam Rackis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m7eio/mongo-graphql-starter/issues"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "globalSetup": "<rootDir>/test/masterSetup.js"
+  },
+  "homepage": "https://github.com/m7eio/mongo-graphql-starter",
+  "devDependencies": {
+    "@graphql-tools/schema": "^8.3.7",
+    "babel-jest": "^28.1.1",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "codecov": "^3.8.1",
+    "cross-env": "^6.0.3",
+    "del": "3.0.0",
+    "dotenv": "^6.2.0",
+    "dotenv-cli": "^4.0.0",
+    "express": "^4.17.0",
+    "express-graphql": "^0.12.0",
+    "glob": "^7.1.2",
+    "graphql": "^16.3.0",
+    "jest": "^28.1.1",
+    "json5": "^2.2.1",
+    "mongodb": "^3.1.13"
+  },
+  "scripts": {
+    "test-local": "jest --runInBand --config=test/jestConfig/jest.configRoot.json",
+    "test": "jest --runInBand --bail --detectOpenHandles --config=test/jestConfig/jest.configRoot.json && dotenv codecov",
+    "test1": "jest --runInBand --config=test/jestConfig/jest.config1.json",
+    "test1a": "jest --runInBand --config=test/jestConfig/jest.config1a.json",
+    "test2": "jest --runInBand --config=test/jestConfig/jest.config2.json",
+    "test3": "jest --runInBand --config=test/jestConfig/jest.config3.json",
+    "test4": "jest --runInBand --config=test/jestConfig/jest.config4.json",
+    "test4-pl": "cross-env PREFER_LOOKUP=true jest --runInBand --config=test/jestConfig/jest.config4.json",
+    "test5": "jest --runInBand --config=test/jestConfig/jest.config5.json",
+    "test5-pl": "cross-env PREFER_LOOKUP=true jest --runInBand --config=test/jestConfig/jest.config5.json",
+    "test6": "jest --runInBand --config=test/jestConfig/jest.config6.json",
+    "test7": "jest --runInBand --config=test/jestConfig/jest.config7.json",
+    "test8": "jest --runInBand --config=test/jestConfig/jest.config8.json",
+    "test9": "jest --runInBand --config=test/jestConfig/jest.config9.json",
+    "test10": "jest --runInBand --config=test/jestConfig/jest.config10.json",
+    "test11": "jest --runInBand --config=test/jestConfig/jest.config11.json",
+    "testts": "jest --runInBand --config=test/jestConfig/jest.config-ts.json"
+  },
+  "dependencies": {
+    "@graphql-codegen/core": "^2.5.1",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-operations": "^2.3.5",
+    "dataloader": "2.0.0",
+    "esm": "^3.2.25",
+    "graphql-type-json": "^0.3.2",
+    "lodash.flatmap": "4.5.0",
+    "mkdirp": "^1.0.4",
+    "prettier": "latest"
+  },
+  "peerDependencies": {
+    "graphql": ">= 0.13.2",
+    "mongodb": ">= 2.2.31"
+  }
+}

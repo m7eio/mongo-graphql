@@ -1,0 +1,13 @@
+export const MongoIdType = "MongoId";
+export const MongoIdArrayType = "MongoIdArray";
+export const StringType = "String";
+export const StringArrayType = "StringArray";
+export const IntType = "Int";
+export const LongType = "Long";
+export const IntArrayType = "IntArray";
+export const LongArrayType = "LongArray";
+export const FloatType = "Float";
+export const FloatArrayType = "FloatArray";
+export const DateType = "Date";
+export const BoolType = "Boolean";
+export const JSONType = "JSON";

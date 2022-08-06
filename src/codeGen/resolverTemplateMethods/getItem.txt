@@ -1,0 +1,13 @@
+    async get${objName}(root, args, context, ast) {
+      let db = await (typeof root.db === "function" ? root.db() : root.db);
+      await runHook("queryPreprocess", { db, root, args, context, ast });
+      context.__mongodb = db;
+      let queryPacket = decontructGraphqlQuery(args, ast, ${objName}Metadata, "${objName}");
+      let { aggregationPipeline } = queryPacket;
+      await runHook("queryMiddleware", queryPacket, { db, root, args, context, ast });
+      let results = await load${objName}s(db, aggregationPipeline, root, args, context, ast, "${objName}");
+
+      return {
+        ${objName}: results[0] || null
+      };
+    }
